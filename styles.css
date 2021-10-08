@@ -1,0 +1,738 @@
+
+#contenedor_carga{
+    background-color: rgba(0, 0, 0, 0.87);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 1s ease ;
+    z-index: 1000;
+}
+#carga{
+    border: 5px solid #ABB2B9;
+    border-top-color: #F8F9F9;
+    height: 70px;
+    width: 70px ;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation: girar 0.6s linear infinite;
+}
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#cargando{
+    font-size: 22px;
+    position: fixed;
+    top: 55%;
+    left: 0.9%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: white;    
+}
+
+
+
+/*##########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+################################    PAGINA INICIO (TODO)    ################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+*/
+body{
+    background-color: #BDBDBD;
+    font-family:'Times New Roman', Times, serif;
+    z-index: -1;
+    
+}
+
+
+
+/* ########################## HEADER #############################*/
+h1 {
+    background-color: #6E6E6E;
+    color: white;
+    text-align: center;
+    margin-top: 0%;
+    height: 60px;
+    padding-top: 1.5%;
+    text-shadow: 5px 10px 10px black;
+    box-shadow: 0px 5px 20px black;
+    font-size: 40px;
+}
+
+header{
+    background-color: blanchedalmond;
+}
+
+
+
+
+
+/*#################################### MENU ###############################*/
+#menu {
+    background-size: 30%;
+    width: 60px;
+    height: 60px;   
+}
+.menu {
+    transition: all 0.5s;
+    position: absolute;
+    top: 110px;
+    left: 1%;
+    width: 20px;
+    z-index: 10 ;
+}
+.menu.giro {
+    transform: rotate(90deg);
+    transition: all 0.2s;
+    position: fixed;
+    top: 110px;
+    left: 216px;
+}
+img {
+    width: 101%;
+    border: 2px solid black;
+    border-radius: 15%;
+    
+}
+.menuT{
+    visibility: hidden;
+    position: absolute;
+    left: 1%;
+    font-size: 22px;
+    z-index: 2;
+    transition: all 0.3s;
+    margin-top: 20px;
+    
+}
+
+
+.menuA{
+    margin-top: 20px;
+    position: absolute;
+    visibility: visible;
+    font-size: 22px;
+    font-weight: bolder;
+    left: 80px;
+    transition: 0.3s;
+    z-index: 2;
+}
+.hidden{
+    position: absolute;
+    visibility: hidden;
+}
+
+/*#################################### MENU LATERAL ###############################*/
+
+.menu-lateral{
+    top: 108px;
+    height: 87%;
+    width: 200px;
+    background-color: #E6E6E6;
+    position: fixed;
+    left: -205px;
+    transition: all 0.5s;
+    border: 2px solid    black ;
+    z-index: 12 ;
+}
+.menu-lateral.activo{
+    position: fixed ;
+    top: 108px;
+    left: 1%;
+    transition: all 0.2s;
+    z-index: 12 ;
+    
+}
+.lateralFontSize{
+    font-size: 20px;
+}
+
+/*######################### CENTRO DE PAGINA ##################################*/
+
+.parrafo{
+    background-color: white;
+    width: 80%;
+    display: block;
+    margin-left: 11%;
+    height: 100%;
+    
+}
+.parrafos{
+    text-align:center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+h2{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+p{
+    text-align: center  ;
+    font-size: 18px;
+}
+
+/*###############################################################################
+################################## ENLACES DE LISTA #############################
+#################################################################################
+*/
+                      /*################ INICIO ###############*/
+#inicio:link{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#inicio:visited{
+    color: black;
+}
+                        /*################ CONTACTOS ###############*/
+#contactos{
+    position: absolute;
+    margin-top: 20px;
+    top: 22px;
+    cursor: pointer;
+}
+                        /*############### INVENTARIO ################*/
+#inventario{
+    position: absolute;
+    margin-top: 20px;
+    top: 48px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.inventario:link{
+    color: black;
+    text-decoration: none;
+}
+.inventario:visited{
+    color: black;
+}
+                        /*############### INICIAR SESION ################*/
+#iniciarsesion{
+    position: absolute;
+    margin-top: 20px;
+    top: 74px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.sesion:link{
+    color: black;
+    text-decoration: none;
+}
+.sesion:visited{
+    color: black;
+}
+
+/*################################# RESALTADO ############################*/
+#inicio:hover{
+    font-size: 23px;
+    transition: all 0.2s;
+}
+#contactos:hover{
+    font-size: 23px;
+    transition: all 0.2s;
+}
+#inventario:hover{
+    font-size: 23px;
+    transition: all 0.2s;
+}
+#iniciarsesion:hover{
+    font-size: 23px;
+    transition: all 0.2s;
+}
+#inventario.mover:hover{
+    font-size: 23px;
+    transition: all 0.2s;
+}
+#iniciarsesion.mover:hover{
+    font-size: 23px;
+    transition: all 0.2s;
+}
+
+
+
+/*############################### CONTACTOS ##########################*/
+
+.contactos{
+    font-size: 16px ;
+    position: absolute;
+    left: -325px;
+    transition: all 0.5s;
+    border: 1px solid black;
+    border-radius: 10%;
+    top: 65px;
+}
+
+.contactos.abrir{
+    width: 190px;
+    position: absolute;
+    top: 65px;
+    left: 5px;
+    font-size: 16px ;
+    border: 1px solid black;
+    border-radius: 10%;
+    padding-bottom: 5px;
+    transition: all 0.5s;
+    background-color: #E6E6E6 ;
+
+}
+
+/*########## MUEVE LOS OTROS ENLACES DEL PANEL LATERAL ######*/
+
+#inventario.mover{
+    position: absolute;
+    top: 175px;
+    transition: all 0.4s;
+}
+
+#iniciarsesion.mover{
+    position: absolute;
+    top: 205px;
+    transition: all 0.4s;
+}
+
+/*##########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+################################    PAGINA INVENTARIO    ###################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+*/
+
+.open{
+    position: absolute;
+    text-align: center;
+    height: 250px ;
+    width: 75%;
+    background-color: brown;
+    z-index: 2;
+    top: 200;
+    
+}
+
+/*###########################################################################################
+#######################################  TABLA  #############################################
+############################################################################################# 
+*/
+table{
+    width: 82%;
+    margin-left: 130px;
+    margin-right: 100px;
+}
+tr{
+    height: 290px;
+    background-color: #E6E6E6;
+    z-index: 1 ;
+}
+td{
+    float: left;
+    display: block;
+    width: 100px;
+    background-color:#BDBDBD;
+    margin: 10px;
+    width: 22.75%;
+    height: 270px;
+    transition: 0.3s;
+    z-index: 2 ;
+    
+}
+
+#card1{
+    position: absolute;
+    top: 110px;
+    left: 143px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card2{
+    position: absolute;
+    top: 110px;
+    left: 395px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card3{
+    position: absolute;
+    top: 110px;
+    left: 648px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card4{
+    position: absolute;
+    top: 110px;
+    left: 902px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card5{
+    position: absolute;
+    top: 402px;
+    left: 143px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card6{
+    position: absolute;
+    top: 402px;
+    left: 395px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card7{
+    position: absolute;
+    top: 402px;
+    left: 648px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card8{
+    position: absolute;
+    top: 402px;
+    left: 902px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card9{
+   
+    top: 693px;
+    left: 143px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card10{
+    
+    top: 693px;
+    left: 395px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card11{
+    
+    top: 693px;
+    left: 648px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#card12{
+    
+    top: 693px;
+    left: 902px;
+    background-color:#BDBDBD;
+    width: 231.7px;
+    height: 270px;
+    transition: 0.3s;
+}
+#fila3{ 
+    opacity: 0 ;  
+    transition: 1s;
+}
+#fila4{
+    opacity: 0 ;  
+    transition: 1s;
+}
+
+#fila5{
+    opacity : 0 ; 
+    transition: 1s;
+}
+.fila3{
+    animation: as 1s ease-in; 
+    opacity : 1 ; 
+}
+@keyframes as{
+    0%{
+        transform: translateX(90px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.fila4{
+    animation: asd 1s ease-in; 
+    opacity : 1 ; 
+}
+@keyframes asd{
+    0%{
+        transform: translateX(-110px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.fila5{
+    animation: asdf 1s ease-in; 
+    opacity : 1 ; 
+}        
+@keyframes asdf{
+    0%{
+        transform: translateX(110px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+td:hover{
+    margin:0%;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    width: 240px;
+    height: 280px;
+
+}
+/*#####################################################################################
+########################################## REDES ######################################
+#######################################################################################
+*/
+
+
+[name="insta"]{
+   width: 50px;
+   height: 50px;
+   right: 0px;
+   top: 51%;
+   margin-right: 5px;
+   position: fixed;
+   transition: all 350ms;
+   z-index: 10 ;
+}
+[name="insta"]:hover{
+   width: 55px;
+   height: 55px;
+}
+[name="face"]{
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    top: 44.6%;
+    margin-right: 5px;
+    position: fixed;
+    border-radius: 10px;
+    transition: all 350ms; 
+    z-index: 20 ;
+   }
+[name="face"]:hover{
+   width: 55px;
+   height: 55px;
+   z-index: 20;
+}
+
+.clearfix{
+   float: none;
+   clear: both;
+}
+[name="fondoredes"]{
+   transition: 1s;
+   position: fixed;
+   right: 0px;
+   top: 42.5%;
+   width: 100px;
+   height: 16%;
+   border-radius: 20px 0px 0px 20px;
+}
+
+
+.move{
+    position: absolute;
+    top: 48%;
+    transition: 2s;
+}
+
+/*##########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+##############################    PAGINA INICIAR SESION     ################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+*/
+#sesion-img{
+    margin-top: 10%;
+    width: 20%;
+    margin-left: 40% ;
+}
+#form-container{
+    border-radius: 20%;
+    background-color: cadetblue;
+    width: 60%;
+    height: 600px;
+    margin-left: 20%;
+
+}
+label{
+    display: block;
+    float: left;
+    margin: 10px;
+    margin-left:  32%;
+}
+#usuario{
+    margin-left: 35%;
+}
+input{
+    margin-left: 30%;
+    float: left;
+    margin: 10px;
+    display: block;
+}
+form{
+    padding-top: 5%;
+    text-align: center;
+}
+#button-container{
+    position: absolute;
+    bottom: 43.1%;
+    margin-left: 20%;
+    width: 8%;
+    
+}
+#button-container2{
+    position: absolute;
+    bottom: 42%;
+    margin-left: 28%;
+}
+#button-container3{
+    position: absolute;
+    bottom: 37.2%;
+
+    margin-left: 18%;
+    
+}
+#button-container4{
+    position: absolute;
+    bottom: 37%;
+    margin-left: 29%;
+}
+.boton{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4%;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+.boton:hover{
+    box-shadow: 0 0 20px black;
+}
+
+/*#########################################################################################
+####################### del video del peruanito uqe explica bien ##########################
+###########################################################################################
+*/
+
+.animado{
+    opacity: 0 ; /* @@@@@ para que no se vea @@@@@@@*/
+    transition: all 0.8s;
+}
+
+.mostrarArriba {
+    animation: mostrarArriba 0.7s; /*@@@ nombre de la animacion y su duracion @@@*/
+
+}
+
+
+/*##########################################################################################
+############################################################################################
+###################### BOTON PARA VOLVER A LA PARTE ALTA DE LA PAGINA ######################
+############################################################################################
+############################################################################################
+*/
+
+#backUp{
+    
+    opacity: 0;
+    width: 60px;
+    position: fixed;
+    bottom: 10px ;
+    right: 30px;
+    transform: rotate(90deg);
+    transition: all 0.7s;
+    cursor: pointer;    
+    
+}
+#backUp:hover{
+    width: 65px;
+    transition: all 0.2s;
+    z-index: 5 ;
+}
+.show{
+    animation: popop .5s ease-in-out;
+    width: 60px;    
+    transform: translate(-50% , -50% );
+    bottom: 10px ;
+    right: 30px;
+}
+
+
+
+
+
+@keyframes popop{
+    0%{
+        width: 0rem;
+        height: 0rem;
+        bottom: 10px ;
+        right: 30px;
+    }
+    50%{
+        width: 5rem ;
+        height: 5rem;
+        right: 25px;
+    }
+    100%{
+        width: 60px;
+        bottom: 10px ;
+        right: 30px;
+        z-index: 10;
+
+    }
+}
